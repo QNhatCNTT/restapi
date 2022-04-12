@@ -5,4 +5,4 @@
 ### `npm i`
 
 ## Run
-### `npm start`
+### `npm run dev`
