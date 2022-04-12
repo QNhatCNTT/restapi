@@ -2,11 +2,12 @@ const express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 const cors = require("cors");
-
+const db = require("./app/models");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081",
+  origin: true,
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
@@ -45,7 +46,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-const db = require("./app/models");
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,

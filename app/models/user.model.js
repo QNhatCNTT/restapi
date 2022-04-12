@@ -1,6 +1,3 @@
-const moment = require("moment-timezone");
-const dateFormat = moment.tz(Date.now(), "Asia/Ho_Chi_Minh");
-console.log(dateFormat);
 module.exports = (mongoose) => {
   var schema = mongoose.Schema(
     {
